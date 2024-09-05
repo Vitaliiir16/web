@@ -52,6 +52,8 @@
     gap: 50px;
     justify-content: flex-start;
     padding-left: 300px;
+    left: 50px;
+
 }
 
 .info a {
@@ -73,7 +75,7 @@
 
 .text-container {
     position: absolute;
-    top: 28%;
+    top: 30%;
     left: 7%;
     width: 700px;
     height: auto;
