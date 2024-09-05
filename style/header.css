@@ -49,9 +49,9 @@
 }
 
 .info {
-    gap: 50px;
+    gap: 60px;
     justify-content: flex-start;
-    padding-left: 300px;
+    padding-left: 250px;
     left: 50px;
 
 }
@@ -60,7 +60,7 @@
     padding: 10px 20px;
     text-decoration: none;
     color: #FFFFFF;
-    margin-right: 5px;
+    margin-right: -10px;
 }
 
 .info a:hover {
