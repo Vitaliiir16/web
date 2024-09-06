@@ -31,36 +31,21 @@
     margin: 0;
 }
 
-.about,
-.how,
-.faqs {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.contact {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 16px;
-    background-color: #EE4D47;
-    padding: 15px 30px;
-    border-radius: 10px;
-}
-
 .info {
-    gap: 60px;
+    display: flex;
+    gap: 20px;
     justify-content: flex-start;
     padding-left: 250px;
+    position: relative;
     left: 50px;
-
 }
+
 
 .info a {
     padding: 10px 20px;
     text-decoration: none;
     color: #FFFFFF;
-    margin-right: -10px;
+    margin-right: 0;
 }
 
 .info a:hover {
@@ -70,6 +55,14 @@
 .info a:active {
     color: black;
 }
+
+
+.contact {
+    background-color: #EE4D47;
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400&display=swap');
 

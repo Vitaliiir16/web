@@ -1,4 +1,4 @@
-function animateCar() {
+function carSlide() {
     const car = document.querySelector('.car');
     car.classList.add('animating');
 
