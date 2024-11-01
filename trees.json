@@ -1,0 +1,26 @@
+[
+  {
+    "brand": "в",
+    "height": 2,
+    "price": 2,
+    "material": "в"
+  },
+  {
+    "brand": "ва",
+    "height": 5,
+    "price": 5,
+    "material": "па"
+  },
+  {
+    "brand": "га",
+    "height": 1,
+    "price": 1,
+    "material": "пластик"
+  },
+  {
+    "brand": "ба",
+    "height": 10,
+    "price": 10,
+    "material": "пластик"
+  }
+]
