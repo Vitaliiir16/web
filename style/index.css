@@ -1,0 +1,10 @@
+@import "header.css";
+@import "man.css";
+@import "women.css";
+@import "comments.css";
+@import "footer.css";
+body {
+    background: #FEF8F5;
+    margin: 0;
+    padding: 0;
+}

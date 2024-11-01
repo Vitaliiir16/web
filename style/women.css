@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+
+@media (max-width: 700px) {
+    .women-foto {
+        display: none;
+        width: 90vw;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .women-foto img {
+        display: none;
+        width: 100%;
+        height: auto;
+    }
+
+    .hta {
+        display: flex;
+        justify-content: center;
+        font-family: Rubik;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0.1em;
+        text-align: left;
+        color: #EE4D47
+    }
+
+    .text-when {
+        display: flex;
+        justify-content: center;
+        width: 80% ;
+        padding: 10px;
+        font-family: Rubik;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 40px;
+        text-align: left;
+        color: #402B2B;
+        margin: 0 auto;
+        ;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+    .women-foto {
+        width: 90vw;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .women-foto img {
+        width: 100%;
+        height: auto;
+        display: none;
+    }
+
+    .hta {
+        display: flex;
+        justify-content: center;
+        font-family: Rubik;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0.1em;
+        text-align: left;
+        color: #EE4D47
+    }
+
+    .text-when {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        padding: 10px;
+        font-family: Rubik;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 40px;
+        text-align: left;
+        color: #402B2B;
+        margin-left: 11%;
+        ;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1500px) {
+    .women-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
+    
+    .women-foto {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding-right: 20px;
+    }
+
+    .women-foto img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .w-text {
+        flex: 1;
+        padding-left: 20px;
+    }
+
+    .hta {
+        font-family: Rubik;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0.1em;
+        text-align: left;
+        color: #EE4D47;
+        margin-bottom: 10px;
+    }
+
+    .text-when {
+        width: 90%;
+        font-family: Rubik;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 40px;
+        text-align: left;
+        color: #402B2B;
+    }
+}
+
+@media (min-width: 1500px) and (max-width: 2500px) {
+    .women-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto; /* Центрує контейнер горизонтально */
+        max-width: 1200px; /* Встановлює максимальну ширину контейнера */
+        width: 100%; /* Задає ширину контейнера на 100% від доступного простору */
+    }
+    
+    .women-foto {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding-right: 20px;
+    }
+
+    .women-foto img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .w-text {
+        flex: 1;
+        padding-left: 20px;
+    }
+
+    .hta {
+        font-family: Rubik;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0.1em;
+        text-align: left;
+        color: #EE4D47;
+        margin-bottom: 10px;
+    }
+
+    .text-when {
+        width: 90%;
+        font-family: Rubik;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 40px;
+        text-align: left;
+        color: #402B2B;
+    }
+}
