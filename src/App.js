@@ -1,17 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Catalog from './components/Catalog';
-import CreateTree from './components/CreateTree';
-import EditTree from './components/EditTree';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
+import Home from './components/Home';
+import Catalog from './components/Catalog';
+import './components/styles.css';
 
 const App = () => (
   <Router>
     <Header />
     <Routes>
-      <Route path="/" element={<Catalog />} />
-      <Route path="/create" element={<CreateTree />} />
-      <Route path="/edit/:id" element={<EditTree />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/catalog" element={<Catalog />} />
     </Routes>
   </Router>
 );

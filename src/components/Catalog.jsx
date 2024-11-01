@@ -1,46 +1,63 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import './styles.css';
+import TreeModal from './TreeModal';
 
 const Catalog = () => {
   const [trees, setTrees] = useState([]);
   const [search, setSearch] = useState('');
-  const [sortByPrice, setSortByPrice] = useState(false);
-  const navigate = useNavigate();
+  const [sortOrder, setSortOrder] = useState('none');
+  const [selectedTree, setSelectedTree] = useState(null);
 
   useEffect(() => {
-    const storedTrees = JSON.parse(localStorage.getItem('trees')) || [];
-    setTrees(storedTrees);
+    fetch('/trees.json')
+      .then(response => response.json())
+      .then(data => setTrees(data))
+      .catch(error => console.error('Error fetching trees:', error));
   }, []);
 
-  const deleteTree = (id) => {
-    const updatedTrees = trees.filter((tree) => tree.id !== id);
-    localStorage.setItem('trees', JSON.stringify(updatedTrees));
-    setTrees(updatedTrees);
+  const handleResetFilters = () => {
+    setSortOrder('none');
+    setSearch('');
   };
 
-  const filteredTrees = trees
-    .filter((tree) => tree.manufacturer.toLowerCase().includes(search.toLowerCase()))
-    .sort((a, b) => (sortByPrice ? a.price - b.price : 0));
+  const filteredTrees = trees.filter((tree) =>
+    tree.manufacturer.toLowerCase().includes(search.trim().toLowerCase())
+  );
+
+  const sortedTrees = filteredTrees.sort((a, b) => {
+    if (sortOrder === 'ascending') {
+      return a.price - b.price;
+    } else if (sortOrder === 'descending') {
+      return b.price - a.price;
+    }
+    return 0;
+  });
 
   return (
     <div>
-      <input
-        type="text"
-        placeholder="Пошук за виробником"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      <button onClick={() => setSortByPrice(!sortByPrice)}>
-        Сортувати за ціною
-      </button>
-      {filteredTrees.map((tree) => (
-        <div key={tree.id}>
-          <p>Виробник: {tree.manufacturer}</p>
-          <p>Ціна: {tree.price} грн</p>
-          <button onClick={() => navigate(`/edit/${tree.id}`)}>Редагувати</button>
-          <button onClick={() => deleteTree(tree.id)}>Видалити</button>
-        </div>
-      ))}
+      <div className="srch">
+        <input
+          type="text"
+          placeholder="Пошук за виробником"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <button className="srt" onClick={() => setSortOrder('ascending')}>Сортувати за зростанням</button>
+        <button className="srt" onClick={() => setSortOrder('descending')}>Сортувати за спаданням</button>
+        <button className="srt" onClick={handleResetFilters}>Без сортування</button>
+      </div>
+      <div className="trees-container">
+        {sortedTrees.map((tree) => (
+          <div className="tree-item" key={tree.id}>
+            <p>Виробник: {tree.manufacturer}</p>
+            <p>Ціна: {tree.price} грн</p>
+            <button onClick={() => setSelectedTree(tree)}>Переглянути</button>
+          </div>
+        ))}
+      </div>
+      {selectedTree && (
+        <TreeModal tree={selectedTree} onClose={() => setSelectedTree(null)} />
+      )}
     </div>
   );
 };
