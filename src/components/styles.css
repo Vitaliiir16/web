@@ -22,6 +22,17 @@ nav a:hover {
   text-decoration: underline;
 }
 
+footer {
+  
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
 .home-content {
   display: flex;
   flex-direction: column;
@@ -36,12 +47,23 @@ nav a:hover {
   margin: 0 auto;
 }
 
+.tree-images img {
+  width: 150px;
+  height: auto;
+  margin: 10px;
+}
 
 .srch {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin: 20px 0;
+}
+
+.srt-select {
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1em;
 }
 
 .trees-container {
@@ -66,48 +88,43 @@ nav a:hover {
   transform: scale(1.05);
 }
 
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-content {
-  background: white;
+.tree-page {
+  max-width: 600px;
+  margin: 0 auto;
   padding: 20px;
-  border-radius: 5px;
-  width: 80%;
-  max-width: 400px;
-  text-align: center;
+  background-color: #ffffff;
 }
 
-button {
-  margin: 5px;
-  padding: 10px;
+.view-button {
   background-color: #4CAF50;
   color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-button:hover {
+.view-button:hover {
   background-color: #45a049;
 }
 
-.srt {
-  padding: 10px 15px;
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #EE4D47;
+  color: #FFFFFF;
+  text-decoration: none;
   border-radius: 5px;
-  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
 }
 
-.modal-content p {
-  margin: 8px 0;
-  font-size: 1em;
+.back-button:hover {
+  background-color: #d9433f;
+}
+
+.tree-img {
+  width: 180px;
+  height: auto;
 }
