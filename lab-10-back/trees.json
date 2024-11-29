@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "manufacturer": "TreeCo",
+        "price": 600,
+        "height": 120,
+        "description": "Ялинка висотою 120 см, ідеальна для -------."
+      },
+      {
+        "id": 2,
+        "manufacturer": "GreenCristmas",
+        "price": 1500,
+        "height": 200,
+        "description": "Велика ялинка висотою 200 см, ідеальна для -------."
+      },
+      {
+        "id": 3,
+        "manufacturer": "Epicentr",
+        "price": 1200,
+        "height": 180,
+        "description": "Ялинка висотою 180 см, ідеальна для -------."
+      },
+      {
+        "id": 4,
+        "manufacturer": "HappyTrees",
+        "price": 1700,
+        "height": 220,
+        "description": "Величезна ялинка висотою 220 см, ідеальна для -------."
+      },
+      {
+        "id": 5,
+        "manufacturer": "celebrate",
+        "price": 1000,
+        "height": 160,
+        "description": "Ялинка висотою 160 см,  ідеальна для -------."
+      },
+      {
+        "id": 6,
+        "manufacturer": "RoyalMarlin",
+        "price": 1750,
+        "height": 190,
+        "description": "Велика ялинка висотою 190 см, ідеальна для -------."
+      }
+]
